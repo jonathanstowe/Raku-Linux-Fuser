@@ -30,6 +30,11 @@ ok($proc ~~ Linux::Fuser::Procinfo, "And it's the right kind of object");
 is($proc.pid, $*PID, "got the expected PID");
 ok($proc.cmd.elems, "got some command line");
 
+is($proc.user, qx[id -un].chomp, "got the right user");
+
+ok(my $filedes = $proc.filedes, "get the filedescriptor info");
+ok($filedes ~~ Linux::Fuser::FileDescriptor, "and it's the right sort of object");
+
 $filename.IO.remove;
 
 done;

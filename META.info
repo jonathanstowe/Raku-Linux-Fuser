@@ -3,7 +3,7 @@
     "version" : "*",
     "author" : "github:jonathanstowe",
     "description" : "Discover which process has a file open, in pure Perl 6",
-    "depends" : ["IO::Path::More"],
+    "depends" : ["IO::Path::More", "System::Passwd"],
     "provides" : {
         "Linux::Fuser" : "lib/Linux/Fuser.pm6"
     },
