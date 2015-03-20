@@ -44,7 +44,7 @@ owner.
 class Linux::Fuser {
 
 
-	multi method fuser (Str $file ) {
+   multi method fuser (Str $file ) {
       self.fuser(IO::Path.new($file));
    }
 
@@ -57,7 +57,7 @@ class Linux::Fuser {
       for dir('/proc', test => /^\d+$/) -> $proc {
          try {
             for $proc.append('fd').dir(test => /^\d+$/) -> $fd {
-               if ( self.same_file($file, $fd ) ) {
+               if ( self!same_file($file, $fd ) ) {
                   @procinfo.push(Linux::Fuser::Procinfo.new(proc_file => $proc, fd_file => $fd));
                   CATCH {
                      note $_;
@@ -66,11 +66,10 @@ class Linux::Fuser {
             }
          }
       }
-
       return @procinfo;
-	}
+   }
 
-   method same_file(IO::Path $left, IO::Path $right) {
+   method !same_file(IO::Path $left, IO::Path $right) {
       my Bool $rc = False;
       if ( ( $left.inode == $right.inode ) && ( $left.device == $right.device )) {
          $rc = True;
