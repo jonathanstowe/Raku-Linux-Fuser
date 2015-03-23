@@ -1,7 +1,7 @@
 use v6;
-use strict;
 
 use Test;
+use lib 'lib';
 
 use Linux::Fuser;
 
