@@ -1,5 +1,7 @@
-use IO::Path::More;
 
+use lib 'lib';
+
+use IO::Path::More;
 use Linux::Fuser::Procinfo;
 
 =begin pod
