@@ -2,6 +2,8 @@
 
 use v6;
 
+use lib 'lib';
+
 use Linux::Fuser;
 
 multi sub MAIN(Bool :$u = False) {
