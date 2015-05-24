@@ -1,7 +1,9 @@
 {
     "name" : "Linux::Fuser",
-    "version" : "0.0.1",
-    "author" : "github:jonathanstowe",
+    "version" : "v0.0.2",
+    "authors" : [ "Jonathan Stowe <jns+git@gellyfish.co.uk" ],
+    "author" : "Jonathan Stowe <jns+git@gellyfish.co.uk",
+    "auth" : "github:jonathanstowe",
     "description" : "Discover which process has a file open, in pure Perl 6",
     "depends" : ["IO::Path::More", "System::Passwd"],
     "provides" : {
