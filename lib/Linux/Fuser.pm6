@@ -69,16 +69,14 @@ class Linux::Fuser {
       my $inode  = $file.inode;
 
       for dir('/proc', test => /^\d+$/) -> $proc {
-         try {
-            for $proc.append('fd').dir(test => /^\d+$/) -> $fd {
+          my $fd_dir = $proc.append('fd');
+          if $fd_dir.r {
+          try for $fd_dir.dir(test => /^\d+$/) -> $fd {
                if ( self!same_file($file, $fd ) ) {
                   @procinfo.push(Linux::Fuser::Procinfo.new(proc_file => $proc, fd_file => $fd));
-                  CATCH {
-                     note $_;
-                  }
                }
             }
-         }
+          }
       }
       return @procinfo;
    }
