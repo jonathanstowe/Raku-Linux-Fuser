@@ -76,3 +76,4 @@ class Linux::Fuser::Procinfo:ver<v0.0.4>:auth<github:jonathanstowe> {
    }
 
 }
+# vim: expandtab shiftwidth=4 ft=perl6

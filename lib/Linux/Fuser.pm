@@ -91,3 +91,4 @@ class Linux::Fuser:ver<v0.0.4>:auth<github:jonathanstowe> {
         return $rc;
     }
 }
+# vim: expandtab shiftwidth=4 ft=perl6
