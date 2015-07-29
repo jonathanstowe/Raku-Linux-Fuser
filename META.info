@@ -13,7 +13,7 @@
         "Linux::Fuser::Procinfo" : "lib/Linux/Fuser/Procinfo.pm",
         "Linux::Fuser::FileDescriptor" : "lib/Linux/Fuser/FileDescriptor.pm"
     },
-	 "support" {
+	 "support" : {
        "source" : "https://github.com/jonathanstowe/p6-Linux-Fuser.git"
     },
     "source-url" : "https://github.com/jonathanstowe/p6-Linux-Fuser.git"
