@@ -59,5 +59,5 @@ is(@procs.elems,0, "and there aren't any processes");
 
 $filename.IO.remove;
 
-done;
+done-testing;
 # vim: expandtab shiftwidth=4 ft=perl6
