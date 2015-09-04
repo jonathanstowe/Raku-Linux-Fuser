@@ -17,7 +17,8 @@ isa-ok($obj,Linux::Fuser, "and it's the right kind of object");
 
 my $filename = $*PID ~ '.tmp';
 
-my $fh = open "$*PID.tmp", :w;
+
+my $fh = open $filename, :w;
 
 do_tests($filename, "with string filename");
 do_tests($filename.IO, "with IO::Path");
