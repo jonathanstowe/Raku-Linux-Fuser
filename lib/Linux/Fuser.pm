@@ -55,7 +55,7 @@ The class has one method, with two signatures, that does most of the work:
 
 =end pod
 
-class Linux::Fuser:ver<v0.0.4>:auth<github:jonathanstowe> {
+class Linux::Fuser:ver<v0.0.5>:auth<github:jonathanstowe> {
 
     #| Given the path to a file as a String returns a list of L<doc:Linux::Fuser::Procinfo>
     #| objects describing any processes that have the file open
