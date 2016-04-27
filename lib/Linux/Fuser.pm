@@ -58,6 +58,7 @@ class Linux::Fuser:ver<0.0.7>:auth<github:jonathanstowe> {
     # for my own stability
     my role IO::Helper {
         use nqp;
+
         method inode() {
             $*DISTRO.name ne any(<MSWin32 os2 dos NetWare symbian>)
                 && self.e
@@ -88,14 +89,14 @@ class Linux::Fuser:ver<0.0.7>:auth<github:jonathanstowe> {
         my $device = $file.device;
         my $inode  = $file.inode;
 
-        for dir('/proc', test => /^\d+$/) -> $proc {
-            $proc does IO::Helper;
-            my $fd_dir = $proc.append('fd');
+        for dir('/proc', test => /^\d+$/) -> $proc-file {
+            $proc-file does IO::Helper;
+            my $fd_dir = $proc-file.append('fd');
             if $fd_dir.r {
-                try for $fd_dir.dir(test => /^\d+$/) -> $fd {
-                    $fd does IO::Helper;
-                    if ( self!same_file($file, $fd ) ) {
-                        @procinfo.push(Linux::Fuser::Procinfo.new(proc-file => $proc, fd-file => $fd));
+                try for $fd_dir.dir(test => /^\d+$/) -> $fd-file {
+                    $fd-file does IO::Helper;
+                    if ( self!same_file($file, $fd-file ) ) {
+                        @procinfo.push(Linux::Fuser::Procinfo.new(:$proc-file, :$fd-file));
                     }
                 }
             }
