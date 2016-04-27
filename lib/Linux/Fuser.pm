@@ -59,15 +59,27 @@ class Linux::Fuser:ver<0.0.7>:auth<github:jonathanstowe> {
     my role IO::Helper {
         use nqp;
 
+        has Int $.inode;
         method inode() {
-            $*DISTRO.name ne any(<MSWin32 os2 dos NetWare symbian>)
-                && self.e
-                && nqp::p6box_i(nqp::stat(nqp::unbox_s(self.Str), nqp::const::STAT_PLATFORM_INODE))
+            if not $!inode.defined {
+                if self.e {
+                    $!inode = nqp::p6box_i(nqp::stat(nqp::unbox_s(self.Str), nqp::const::STAT_PLATFORM_INODE));
+                }
+            }
+            $!inode;
         }
 
+        has Int $.device;
+
         method device() {
-            self.e && nqp::p6box_i(nqp::stat(nqp::unbox_s(self.Str), nqp::const::STAT_PLATFORM_DEV))
+            if not $!device.defined {
+                if self.e {
+                    $!device = nqp::p6box_i(nqp::stat(nqp::unbox_s(self.Str), nqp::const::STAT_PLATFORM_DEV));
+                }
+            }
+            $!device;
         }
+
         method append (*@nextpaths) {
             my $lastpath = @nextpaths.pop // '';
             self.new($.SPEC.join($.volume, $.SPEC.catdir($.dirname, $.basename, @nextpaths), $lastpath));
