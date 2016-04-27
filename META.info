@@ -7,7 +7,7 @@
     "auth" : "github:jonathanstowe",
     "description" : "Discover which process has a file open, in pure Perl 6",
     "tags" : [ "linux", "system", "utils" ],
-    "build-depends" : [ "panda" ],
+    "build-depends" : [ ],
     "depends" : ["System::Passwd"],
     "provides" : {
         "Linux::Fuser" : "lib/Linux/Fuser.pm",
