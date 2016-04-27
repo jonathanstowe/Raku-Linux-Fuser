@@ -28,7 +28,7 @@ There are no public methods only attributes.
 
 =end pod
 
-class Linux::Fuser::FileDescriptor:ver<0.0.5>:auth<github:jonathanstowe> {
+class Linux::Fuser::FileDescriptor:ver<0.0.8>:auth<github:jonathanstowe> {
 
    #| The file descriptor number in use by the process
    has Int $.fd;
