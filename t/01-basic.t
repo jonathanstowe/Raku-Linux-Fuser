@@ -38,7 +38,7 @@ if $*KERNEL.name eq 'linux' {
         isa-ok($filedes,Linux::Fuser::FileDescriptor, "and it's the right sort of object ($description)");
         is($filedes.pos, 0, "pos is 0 ( $description )");
         ok($filedes.flags > 0, "flags is greater than 0 ($description)");
-        ok($filedes.mnt_id.defined, "mnt_id is defined ( $description)");
+        ok($filedes.mnt-id.defined, "mnt_id is defined ( $description)");
     }
 
     $fh.close;

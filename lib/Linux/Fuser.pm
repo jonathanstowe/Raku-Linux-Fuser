@@ -95,7 +95,7 @@ class Linux::Fuser:ver<0.0.7>:auth<github:jonathanstowe> {
                 try for $fd_dir.dir(test => /^\d+$/) -> $fd {
                     $fd does IO::Helper;
                     if ( self!same_file($file, $fd ) ) {
-                        @procinfo.push(Linux::Fuser::Procinfo.new(proc_file => $proc, fd_file => $fd));
+                        @procinfo.push(Linux::Fuser::Procinfo.new(proc-file => $proc, fd-file => $fd));
                     }
                 }
             }
