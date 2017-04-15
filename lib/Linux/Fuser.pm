@@ -52,7 +52,7 @@ The class has one method, with two signatures, that does most of the work:
 
 =end pod
 
-class Linux::Fuser:ver<0.0.8>:auth<github:jonathanstowe> {
+class Linux::Fuser:ver<0.0.9>:auth<github:jonathanstowe> {
     # Shamelessly stolen from IO::Path::More
     # for my own stability
     my role IO::Helper {
