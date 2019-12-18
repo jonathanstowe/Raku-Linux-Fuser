@@ -10,7 +10,7 @@ This is based on the similarly named module for Perl 5 available from CPAN.
 
 Linux::Fuser provides a mechanism to determine which processes have a specified
 file open in a similar manner to the system utility *fuser*. There is an example
-program *raku-fuser* in the *examples* directory which provides a Raku implementation
+program *raku-fuser* in the *bin* directory which provides a Raku implementation
 of that command.
 
 Because this relies on the layout of the /proc filesystem specific to the Linux
