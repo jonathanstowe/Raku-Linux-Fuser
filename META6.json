@@ -31,7 +31,7 @@
     "Linux::Fuser::FileDescriptor": "lib/Linux/Fuser/FileDescriptor.pm",
     "Linux::Fuser::Procinfo": "lib/Linux/Fuser/Procinfo.pm"
   },
-  "version": "0.0.12",
+  "version": "0.0.13",
   "authors": [
     "Jonathan Stowe <jns+git@gellyfish.co.uk"
   ],
