@@ -1,6 +1,6 @@
 # Linux::Fuser
 
-Discover which process has a file open, in pure Perl 6.
+Discover which process has a file open, in pure Raku.
 
 [![Build Status](https://travis-ci.org/jonathanstowe/p6-Linux-Fuser.svg?branch=master)](https://travis-ci.org/jonathanstowe/p6-Linux-Fuser)
 
@@ -10,7 +10,7 @@ This is based on the similarly named module for Perl 5 available from CPAN.
 
 Linux::Fuser provides a mechanism to determine which processes have a specified
 file open in a similar manner to the system utility *fuser*. There is an example
-program *p6fuser* in the *examples* directory which provides a Perl 6 implementation
+program *raku-fuser* in the *examples* directory which provides a Raku implementation
 of that command.
 
 Because this relies on the layout of the /proc filesystem specific to the Linux
@@ -19,7 +19,7 @@ would be delighted to hear about any where it does work.
 
 ## Installation
 
-Assuming you have a working perl6 installation you should be able to install this
+Assuming you have a working Rakudo installation you should be able to install this
 with *zef* :
 
     zef install Linux::Fuser
@@ -32,7 +32,7 @@ Or if you have a local clone of the repository
 
 Suggestions/patches are welcomed via github at:
 
-https://github.com/jonathanstowe/p6-Linux-Fuser/issues
+https://github.com/jonathanstowe/Raku-Linux-Fuser/issues
 
 I'm not able to test on a wide variety of platforms so any help there would be 
 appreciated.

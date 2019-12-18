@@ -64,7 +64,7 @@ class Linux::Fuser::Procinfo {
         $!filedes = Linux::Fuser::FileDescriptor.new(proc-file => $!proc-file, fd-file => $!fd-file);
 
         if ((my $uid = self!lstat_uid()).defined ) {
-            $!user = get_user_by_uid($uid).username;
+            $!user = get-user-by-uid($uid).username;
         }
     }
 

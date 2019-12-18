@@ -1,12 +1,13 @@
 {
   "name": "Linux::Fuser",
-  "source-url": "https://github.com/jonathanstowe/p6-Linux-Fuser.git",
+  "source-url": "https://github.com/jonathanstowe/Raku-Linux-Fuser.git",
   "support": {
     "email": "jns+git@gellyfish.co.uk",
-    "source": "https://github.com/jonathanstowe/p6-Linux-Fuser.git",
-    "bugtracker": "https://github.com/jonathanstowe/p6-Linux-Fuser/issues"
+    "source": "https://github.com/jonathanstowe/Raku-Linux-Fuser.git",
+    "bugtracker": "https://github.com/jonathanstowe/Raku-Linux-Fuser/issues"
   },
   "perl": "6.*",
+  "raku": "6.*",
   "resources": [
   ],
   "build-depends": [
@@ -30,10 +31,10 @@
     "Linux::Fuser::FileDescriptor": "lib/Linux/Fuser/FileDescriptor.pm",
     "Linux::Fuser::Procinfo": "lib/Linux/Fuser/Procinfo.pm"
   },
-  "version": "0.0.11",
+  "version": "0.0.12",
   "authors": [
     "Jonathan Stowe <jns+git@gellyfish.co.uk"
   ],
-  "description": "Discover which process has a file open, in pure Perl 6",
-  "meta-version": "0"
+  "description": "Discover which process has a file open, in pure Raku",
+  "meta-version": "1"
 }
