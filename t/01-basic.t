@@ -25,7 +25,7 @@ if $*KERNEL.name eq 'linux' {
 
     sub do_tests(Any $file, Str $description) {
         my @procs;
-        lives-ok { 
+        lives-ok {
             @procs = $obj.fuser($file);
         }, "fuser() doesn't die ($description)";
         ok(@procs.elems, "got some processes ($description)");
@@ -49,7 +49,7 @@ if $*KERNEL.name eq 'linux' {
     lives-ok { @procs = $obj.fuser($filename) }, "fuser() closed file";
     is(@procs.elems,0, "and there aren't any processes");
 
-    lives-ok { 
+    lives-ok {
         @procs = $obj.fuser('ThiSdoesNotExIst');
     }, "fuser() no-existent file";
     is(@procs.elems,0, "and there aren't any processes");
@@ -60,4 +60,4 @@ else {
 }
 
 done-testing;
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

@@ -52,7 +52,7 @@ The class has one method, with two signatures, that does most of the work:
 
 =end pod
 
-class Linux::Fuser:ver<0.0.13>:auth<github:jonathanstowe>:api<1.> {
+class Linux::Fuser:ver<0.0.14>:auth<github:jonathanstowe>:api<1.0> {
     # Shamelessly stolen from IO::Path::More
     # for my own stability
     my role IO::Helper {
@@ -129,4 +129,4 @@ class Linux::Fuser:ver<0.0.13>:auth<github:jonathanstowe>:api<1.> {
         return $rc;
     }
 }
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

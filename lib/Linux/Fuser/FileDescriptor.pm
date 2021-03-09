@@ -10,7 +10,7 @@ Linux::Fuser::FileDescriptor - describe a file opened by a process
 
 =begin DESCRIPTION
 
-This provides additional information about the file descriptor instance as 
+This provides additional information about the file descriptor instance as
 opened by a process.  Typically it will be accessed via the C<fdinfo> attribute
 of L<doc:Linux::Fuser::Procinfo> and need not be constructed in user code.
 
@@ -43,7 +43,7 @@ class Linux::Fuser::FileDescriptor {
     has IO::Path $.proc-file;
     #| The L<doc:IO::Path> of the /proc/<pid>/fd entry as passed to the constructor
     has IO::Path $.fd-file;
-    #| The L<doc:IO::Path> corresponding to the /proc/<pid>/fdinfo 
+    #| The L<doc:IO::Path> corresponding to the /proc/<pid>/fdinfo
     has IO::Path $.fd-info;
 
     submethod BUILD(:$!proc-file, :$!fd-file) {
@@ -56,4 +56,4 @@ class Linux::Fuser::FileDescriptor {
         $!flags = :8($str_fl) if $str_fl.defined;
     }
 }
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

@@ -1,3 +1,6 @@
+v0.0.14		Tue  9 Mar 12:58:38 GMT 2021
+	* Spring clean
+	* Move from Travis to GH actions
 v0.0.13		Wed 18 Dec 13:09:54 GMT 2019
 	* Fix typo in README from @FCO
 v0.0.12		Wed 18 Dec 10:24:03 GMT 2019

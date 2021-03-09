@@ -15,7 +15,7 @@ Linux::Fuxer::Procinfo - describe the process that has a file opened.
 
 =begin DESCRIPTION
 
-An array of objects of this type are returned by the method C<fuser> in 
+An array of objects of this type are returned by the method C<fuser> in
 L<doc:Linux::Fuser>.  It describes a single process that has the requested
 file open.
 
@@ -53,7 +53,7 @@ class Linux::Fuser::Procinfo {
     #| The L<doc:IO::Path> that corresponds to the /proc/<pid>/fd entry for the file
     has IO::Path $.fd-file;
 
-   
+
     submethod BUILD(:$!proc-file, :$!fd-file) {
         $!pid = $!proc-file.basename + 0;
         my $cmdline = $!proc-file.append('cmdline');
@@ -73,4 +73,4 @@ class Linux::Fuser::Procinfo {
         nqp::p6box_i(nqp::stat(nqp::unbox_s($!fd-file.Str), nqp::const::STAT_UID));
     }
 }
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

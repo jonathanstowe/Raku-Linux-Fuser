@@ -19,8 +19,7 @@ would be delighted to hear about any where it does work.
 
 ## Installation
 
-Assuming you have a working Rakudo installation you should be able to install this
-with *zef* :
+Assuming you have a working Rakudo installation you should be able to install this with *zef* :
 
     zef install Linux::Fuser
 
@@ -43,4 +42,4 @@ This is free software.
 
 Please see the [LICENCE](LICENCE) file in the distribution.
 
-© Jonathan Stowe 2015, 2016, 2017, 2019
+© Jonathan Stowe 2015 - 2021

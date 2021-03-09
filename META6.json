@@ -1,5 +1,8 @@
 {
   "name": "Linux::Fuser",
+  "auth": "github:jonathanstowe",
+  "version": "0.0.14",
+  "api": "1.0",
   "source-url": "https://github.com/jonathanstowe/Raku-Linux-Fuser.git",
   "support": {
     "email": "jns+git@gellyfish.co.uk",
@@ -12,8 +15,6 @@
   ],
   "build-depends": [
   ],
-  "auth": "github:jonathanstowe",
-  "api": "1.0",
   "depends": [
     "System::Passwd"
   ],
@@ -31,7 +32,6 @@
     "Linux::Fuser::FileDescriptor": "lib/Linux/Fuser/FileDescriptor.pm",
     "Linux::Fuser::Procinfo": "lib/Linux/Fuser/Procinfo.pm"
   },
-  "version": "0.0.13",
   "authors": [
     "Jonathan Stowe <jns+git@gellyfish.co.uk"
   ],
