@@ -2,7 +2,7 @@
 
 Discover which process has a file open, in pure Raku.
 
-[![Build Status](https://travis-ci.org/jonathanstowe/p6-Linux-Fuser.svg?branch=master)](https://travis-ci.org/jonathanstowe/p6-Linux-Fuser)
+![Build Status](https://github.com/jonathanstowe/Raku-Linux-Fuser/workflows/CI/badge.svg)
 
 ## Description
 
