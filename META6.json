@@ -1,40 +1,39 @@
 {
-  "name": "Linux::Fuser",
-  "auth": "github:jonathanstowe",
-  "version": "0.0.14",
-  "api": "1.0",
-  "source-url": "https://github.com/jonathanstowe/Raku-Linux-Fuser.git",
   "support": {
     "email": "jns+git@gellyfish.co.uk",
-    "source": "https://github.com/jonathanstowe/Raku-Linux-Fuser.git",
-    "bugtracker": "https://github.com/jonathanstowe/Raku-Linux-Fuser/issues"
+    "bugtracker": "https://github.com/jonathanstowe/Raku-Linux-Fuser/issues",
+    "source": "https://github.com/jonathanstowe/Raku-Linux-Fuser.git"
   },
-  "perl": "6.*",
-  "raku": "6.*",
-  "resources": [
-  ],
-  "build-depends": [
-  ],
+  "source-url": "https://github.com/jonathanstowe/Raku-Linux-Fuser.git",
   "depends": [
     "System::Passwd"
   ],
+  "name": "Linux::Fuser",
+  "auth": "zef:jonathanstowe",
+  "build-depends": [
+  ],
+  "resources": [
+  ],
+  "raku": "6.*",
+  "authors": [
+    "Jonathan Stowe <jns+git@gellyfish.co.uk"
+  ],
+  "provides": {
+    "Linux::Fuser": "lib/Linux/Fuser.pm",
+    "Linux::Fuser::Procinfo": "lib/Linux/Fuser/Procinfo.pm",
+    "Linux::Fuser::FileDescriptor": "lib/Linux/Fuser/FileDescriptor.pm"
+  },
+  "description": "Discover which process has a file open, in pure Raku",
+  "api": "1.0",
+  "test-depends": [
+  ],
+  "meta-version": "1",
+  "version": "0.0.15",
+  "license": "Artistic-2.0",
   "tags": [
     "linux",
     "system",
     "utils",
     "file"
-  ],
-  "license": "Artistic-2.0",
-  "test-depends": [
-  ],
-  "provides": {
-    "Linux::Fuser": "lib/Linux/Fuser.pm",
-    "Linux::Fuser::FileDescriptor": "lib/Linux/Fuser/FileDescriptor.pm",
-    "Linux::Fuser::Procinfo": "lib/Linux/Fuser/Procinfo.pm"
-  },
-  "authors": [
-    "Jonathan Stowe <jns+git@gellyfish.co.uk"
-  ],
-  "description": "Discover which process has a file open, in pure Raku",
-  "meta-version": "1"
+  ]
 }
