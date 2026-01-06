@@ -3,7 +3,7 @@ use v6;
 use nqp;
 use Linux::Fuser::FileDescriptor;
 # For the time being
-use System::Passwd;
+use System::Passwd:auth<zef:raku-community-modules>;
 
 =begin pod
 
